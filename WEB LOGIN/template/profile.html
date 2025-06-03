@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+    
+        .top-right-image {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    
+        .top-right-image img {
+            max-width: 150px;
+            border-radius: 10px;
+        }
+    
+        .info {
+            margin-top: 200px; /* Push content down to avoid overlapping the image */
+            text-align: center;
+        }
+    
+        .info h2, .info p {
+            margin: 10px 0;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Profile</h1>
+    <body>
+        <div class="top-right-image">
+            <img src="{{ user['image_path'] }}" alt="Profile Image">
+        </div>
+    
+        <div class="info">
+            <h2>{{ user['name'] }}</h2>
+            <p>{{ user['age'] }} years old</p>
+            <p>{{ user['address'] }}</p>
+        </div>
+    </body>
+    
+    
+</body>
+</html>
